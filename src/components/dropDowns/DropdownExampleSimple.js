@@ -19,7 +19,11 @@ class DropdownExampleSimple extends Component {
         { key: 1, text: 'Dark', value: 1 },
         { key: 2, text: 'Amber', value: 2 },
         { key: 3, text: 'Light', value: 3 }],
+      pic1: 0,
+      pic2: 0,
     }
+
+    
   }
 
   componentDidUpdate(prevProps) {
@@ -30,17 +34,27 @@ class DropdownExampleSimple extends Component {
     console.log(this.state.options);
   }
 
-handleChange = (e, { value }) => (
-   
-  alert(value)
+
+ 
+
+
+handleChange = (e, { value }) => {
+
+  this.mymethod1(value);
   
-  ); 
+};
+
+mymethod1 = (up1 = 0) =>{
+
+  if(up1 > 0)
+ alert(up1)
+};
 
 render(options, ...props) {
 
     return (
   <Menu compact>
-    {style}<Dropdown clearable options = {this.state.options} selection onChange={this.handleChange} />
+    {style}<Dropdown clearable options = {this.props.options} selection onChange={this.handleChange} />
   </Menu>
     );
     
