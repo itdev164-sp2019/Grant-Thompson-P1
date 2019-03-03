@@ -4,7 +4,7 @@ import React from "react"
 import Layout from "../components/layout"
 //import Image from "../components/image"
 import SEO from "../components/seo"
-import {DropdownExampleSimple} from "../components/dropDowns"
+import DropdownExampleSimple from "../components/dropDowns/DropdownExampleSimple"
 
 const beerType = [{ key: 1, text: 'Light', value: 1 },
 { key: 2, text: 'Amber', value: 2 },
