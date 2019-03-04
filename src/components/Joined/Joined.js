@@ -27,7 +27,8 @@ class Joined extends Component {
                 <DropdownExampleSimple whichSelector="GlassType" options= {glassType}/>
                 <br/>
                 <br/>
-                <Beer beerz="0" cupz="1"/>
+                <Beer beerz="0" cupz="0"/>
+
             </div>
         );
     }
