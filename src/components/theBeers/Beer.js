@@ -22,8 +22,8 @@ class Beer extends Component {
     render({...props}) {
         return(
             <div>
-                <img src={this.state.beers[this.props.beerz]} alt="" style={{ position: "relative", display:"inline", left:"0px", top:"0px", zIndex: "1"}}/>
-                <img src={this.state.cups[this.props.cupz]} alt="" style={{ position: "absolute", left:"15px", zIndex: "2"}}/> 
+                <img src={this.state.beers[this.props.beerz]} alt="" style={{ position: "relative",left:"15px", display:"inline", left:"0px", top:"0px", zIndex: "1"}}/>
+                <img src={this.state.cups[this.props.cupz]} alt="" style={{ position: "relative", left:"-300px", zIndex: "2"}}/> 
                  
             </div>
         );
