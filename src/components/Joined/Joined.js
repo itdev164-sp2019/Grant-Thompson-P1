@@ -15,19 +15,40 @@ class Joined extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {};
+        
+
+        this.state = {
+            beerImage:0,
+            cupImage:1,
+        };
 
     }
+
+    beerzImage(pos){
+
+        this.setState({
+            beerImage:pos
+        });
+
+    };
+
+    cupzImage(pos){
+        this.setState({
+            cupImage:pos
+        });
+    };
+
+
 
     render() {
         return(
             <div>
-                <DropdownExampleSimple whichSelector="BeerType" options= {beerType} />
+                <DropdownExampleSimple whichSelector="BeerType" options= {beerType} handleClick={(arg1=0) => this.beerzImage(arg1)}/>
                 <br/>
-                <DropdownExampleSimple whichSelector="GlassType" options= {glassType}/>
+                <DropdownExampleSimple whichSelector="GlassType" options= {glassType} handleClick={(arg1=0) => this.cupzImage(arg1)}/>
                 <br/>
                 <br/>
-                <Beer beerz="1" cupz="2"/>
+                <Beer beerz={this.state.beerImage} cupz={this.state.cupImage}/>
 
             </div>
         );
