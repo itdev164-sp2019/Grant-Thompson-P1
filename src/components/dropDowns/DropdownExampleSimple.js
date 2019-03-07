@@ -46,8 +46,10 @@ handleChange = (e, { value, ...props }) => {
 
   if(props.whichSelector === "BeerType"){
     this.myMethod1(value);
-  }else{
+  }else if(props.whichSelector === "GlassType"){
     this.myMethod2(value);
+  }else{
+    this.myMethod3(value);
   }
 
   this.setState ( {
@@ -70,6 +72,14 @@ myMethod2 = (up1 = 0) =>{
 
   if(up1 > 0){
   this.props.handleClick(up1-1);
+  console.log(`${this.props.whichSelector}= ${up1}`);
+  }
+};
+
+myMethod3 = (up1 = 0) =>{
+
+  if(up1 > 0){
+  this.props.handleClick(up1-1, up1-1);
   console.log(`${this.props.whichSelector}= ${up1}`);
   }
 };
