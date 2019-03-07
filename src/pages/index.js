@@ -3,7 +3,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 //import Image from "../components/image"
-import SEO from "../components/seo"
+import SEO from "../gatsby-components/seo"
 import { Provider } from 'react-redux'
 import { createStore} from 'redux'
 import reducer from '../store/reducer'
@@ -19,10 +19,12 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Beer Chooser" keywords={[`Beer`, `adult Beverage`, `react`]} />
     <h1>Beer Selector</h1>
-    <p>Please make your Choice below</p>
+    <p>Please make your selections below.</p>
     <p>Now go build something great.</p>
     
     <Joined/>
+    <br/>
+    <br/>
   </Layout>
   </Provider>
 )

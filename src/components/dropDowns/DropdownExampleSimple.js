@@ -61,7 +61,7 @@ console.log(`updated to ${this.state.whichSelector}`);
 myMethod1 = (up1 = 0) =>{
 
   if(up1 > 0){
-  {this.props.handleClick(up1-1)}
+  this.props.handleClick(up1-1);
   console.log(`${this.props.whichSelector}= ${up1}`);
   }
 };
@@ -69,7 +69,7 @@ myMethod1 = (up1 = 0) =>{
 myMethod2 = (up1 = 0) =>{
 
   if(up1 > 0){
-  {this.props.handleClick(up1-1)}
+  this.props.handleClick(up1-1);
   console.log(`${this.props.whichSelector}= ${up1}`);
   }
 };

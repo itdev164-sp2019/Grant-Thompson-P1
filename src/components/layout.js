@@ -9,10 +9,16 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+//import Header from "../gatsby-components/header"
 import "./layout.css"
 
+import {ThemeProvider} from 'styled-components'
+import {Amber as theme} from '../themes/Amber'
+import {Masthead} from '../components/Masthead'
+//import {Header} from '../components/Element'
+
 const Layout = ({ children }) => (
+  <ThemeProvider theme={theme}>
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -25,7 +31,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Masthead siteTitle={data.site.siteMetadata.title} height="100px"/>
         <div
           style={{
             margin: `0 auto`,
@@ -44,6 +50,7 @@ const Layout = ({ children }) => (
       </>
     )}
   />
+  </ThemeProvider>
 )
 
 Layout.propTypes = {
