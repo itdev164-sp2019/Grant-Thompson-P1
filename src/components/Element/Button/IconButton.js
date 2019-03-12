@@ -7,6 +7,8 @@ const StyledButton = styled(ButtonBase)`
   ${props => props.theme.variants.iconButton[props.variant || 'primary']};
   color: limegreen;
   &:hover {color: blue;};
+  border: 1px green solid;
+  border-radius: 5px;
 `
 
 export const IconButton = styled(({ icon, ...props }) => {
