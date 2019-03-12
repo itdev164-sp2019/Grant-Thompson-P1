@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Dropdown from '@bit/semantic-org.semantic-ui-react.dropdown'
 import Menu from '@bit/semantic-org.semantic-ui-react.menu'
-import { connect } from 'react-redux'
+
 
 
 
@@ -103,20 +103,4 @@ DropdownExampleSimple.protoTypes = {
 }
 
 
-const mapStateToProps = state => {
-  return {
-
-  }
-}
-
-
-
-const mapDispatchToProps = dispatch => {
-
-
-  return {
-    myMethod1: () => ({type:'MYMETHOD1', value:this.state.pic1}),
-    myMethod2: () => ({type:'MYMETHOD2', value:this.state.pic2})
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(DropdownExampleSimple);
+export default DropdownExampleSimple;

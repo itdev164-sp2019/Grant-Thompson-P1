@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix:'/assignment/proj1/public',
   siteMetadata: {
     title: `Gatsby Beer Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,

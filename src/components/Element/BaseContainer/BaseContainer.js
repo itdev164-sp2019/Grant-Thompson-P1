@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Flex, Box} from 'rebass'
+
 export const BaseContainer = ({children, flex, ...props}) =>{
     if (flex) {
         return (
@@ -16,8 +17,10 @@ export const BaseContainer = ({children, flex, ...props}) =>{
         )
     }
 
-    BaseContainer.propTypes = {
-        flex: PropTypes.bool,
-        children: PropTypes.node.isRequired
-    }
+    
+}
+
+BaseContainer.propTypes = {
+    flex: PropTypes.bool,
+    children: PropTypes.node.isRequired
 }

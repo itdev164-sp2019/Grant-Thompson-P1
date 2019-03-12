@@ -4,18 +4,18 @@ import React from "react"
 import Layout from "../components/layout"
 //import Image from "../components/image"
 import SEO from "../gatsby-components/seo"
-import { Provider } from 'react-redux'
-import { createStore} from 'redux'
-import reducer from '../store/reducer'
 
 import Joined from '../components/Joined/Joined'
+import { IconButton, Section, LinkButton } from '../components/Element'
+import { Search } from 'styled-icons/feather'
 
-const store = createStore(reducer);
+
 
 
 
 const IndexPage = () => (
-  <Provider store= {store}>
+  
+
   <Layout>
     <SEO title="Beer Chooser" keywords={[`Beer`, `adult Beverage`, `react`]} />
     <h1>Beer Selector</h1>
@@ -25,8 +25,15 @@ const IndexPage = () => (
     <Joined/>
     <br/>
     <br/>
+    <Section flex justifyContent="space-evenly" m={2}>
+  <LinkButton variant="primary">My Custom Button!</LinkButton>
+  <IconButton icon={<Search />} />
+  </Section>
   </Layout>
-  </Provider>
+
+  
+
+  
 )
 
 export default IndexPage

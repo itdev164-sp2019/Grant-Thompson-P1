@@ -56,15 +56,15 @@ class Joined extends Component {
         return(
             <div>
 
-                <text>Beer Color</text>
+                <div>Beer Color</div>
                 <br/>
                 <DropdownExampleSimple whichSelector="BeerType" options= {beerType} handleClick={(arg1=0) => this.beerzImage(arg1)}/>
                 <br/>
-                <text>Vessel Type</text>
+                <div>Vessel Type</div>
                 <br/>
                 <DropdownExampleSimple whichSelector="GlassType" options= {glassType} handleClick={(arg1=0) => this.cupzImage(arg1)}/>
                 <br/>
-                <text>ABV %</text>
+                <div>ABV %</div>
                 <br/>
                 <DropdownExampleSimple whichSelector="AbvType" options= {abvType} handleClick={(arg1=0, arg2=0) => this.abvType(arg1, arg2)}/>
                 <br/>
